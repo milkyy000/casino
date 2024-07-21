@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="chip-removebg-preview.png">
+    <title>Casino</title>
+</head>
+<body>
+
+</head>
+<body>
+    
+    <div id="welcome">
+     
+    <h1>Welcome to RMIT Casino</h1>
+    <button id="startButton" onclick="startGame()">Start Here</button>
+    <img src="dice.png" alt="dice" height="300px">
+
+
+    </div>
+        <div id="money">
+            <p id="yMoney">
+                YOUR MONEY: $<span id="currentMoney">0</span>
+                <button id="reset" onclick="reset()">⟳</button>
+            </p>
+            <div id="addMoney">
+                <input type="number" id="moneyInput" name="moneyInput" placeholder="Enter amount" min="0" max="10000">
+                <button id="addMoneyButton" onclick="addMoney()">Add</button>
+            </div>
+            <button id="play" onclick="play()"> PLAY </button>
+        </div>
+
+
+    <div id="game">
+        <div id="yourChoice">
+            
+            <button class="box" id="big" onclick="choose1()">Big</button>
+            <button class="box" id="small" onclick="choose2()">Small</button>
+
+        </div>
+        <input type="number" id="bet" name="bet" required placeholder="Place your bet">
+        <button id="betButton" onclick="bet()">Bet</button>
+    </div>
+
+    <div id="dice">
+
+        <p>
+            <span id="dice1" onclick="open()"></span>
+     
+            <span id="dice2" onclick="open()"></span>
+    
+            <span id="dice3" onclick="open()"></span>
+        </p>
+
+        <div id="openButton" >
+            <button id="openAll" onclick="openAll()">Open All</button>
+        </div>
+
+        <div id="result">
+            <p>
+                <span id="sum"></span><br>
+            </p>
+        </div>
+    </div>
+
+    <div id="noti">
+        <span id="mess">You Lose!</span>
+    </div>
+
+    <div id="nextButton">
+        <button id="next" onclick="next()">Next➪</button>
+    </div>
+    <div id="yourBet">
+        <p id="ybet">
+            YOUR BET: $<span id="currentBet">0</span>
+        </p>
+    </div>
+    <script src="script.js"></script>
+
+
+
+</body>
+</html>

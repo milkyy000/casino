@@ -92,6 +92,24 @@ function bet(){
         if ( !isNaN(betMoney) &&  betMoney > 0 ){
             if (betMoney > moneyText){
                 alert("Not enough money.");
+            if (moneyText == 0){
+
+                let gameDiv = document.getElementById('game');
+                gameDiv.style.display = 'none';
+
+                let moneyDiv= document.getElementById('money');
+                moneyDiv.style.display = 'flex';
+
+                let moneyInputDiv= document.getElementById('moneyInput');
+                moneyInputDiv.style.display = 'inline-block';
+
+                let addButton = document.getElementById('addMoney');
+                addButton.style.display = 'inline-block';
+
+                let yourMoney = document.getElementById('money');
+                yourMoney.style.justifyContent = 'center';
+                yourMoney.style.height= '100vh';
+            }
             }
             else {
                 moneyText = moneyText - betMoney;
@@ -203,6 +221,9 @@ function next(){
 
     let nextDiv = document.getElementById('nextButton');
     nextDiv.style.display = 'none';
+
+    let yourBet = document.getElementById('yourBet');
+    yourBet.style.display = 'none';
 
     document.getElementById('dice1').innerText = "";
     document.getElementById('dice2').innerText = "";
